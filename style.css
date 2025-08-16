@@ -1,0 +1,122 @@
+body {
+    background-image: url('https://e0.pxfuel.com/wallpapers/806/743/desktop-wallpaper-rain-square-background-particles-easyworship.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.animated-button {
+    padding: 15px 30px;
+    font-size: 45px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    /* Smooth transition for the transform property */
+    position: absolute;
+    bottom: 200px;
+    left: 800px;
+}
+
+.animated-button.clicked {
+    transform: scale(0.95);
+    /* Shrink slightly on click */
+    background-color: #0056b3;
+    /* Darken background on click */
+}
+
+/* Optional: Add a keyframe animation for more complex effects */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animated-button.bouncing {
+    animation: bounce 0.5s ease-in-out;
+}
+
+h1 {
+    font-size: 450%;
+}
+
+#displayText {
+    font-size: 250%;
+}
+
+h1,
+p,
+h3 {
+    background: linear-gradient(to right, #d9eafc, #81a2eb, #1449ba, #b1c5f0);
+    font-weight: 700px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 400% 100%;
+    animation: gradient-animation 5s ease-in-out infinite alternate;
+}
+
+.containerW {
+    width: 35%;
+    height: 250px;
+    max-width: 1200%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    border: 2PX solid #ccc;
+    position: absolute;
+    bottom: 400px;
+    left: 600px;
+    text-align: center;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes text-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-text {
+    text-align: center;
+    animation: text-fade-in 1s ease-out both;
+    animation-duration: 2s;
+}
+
+@media (mind-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+}
